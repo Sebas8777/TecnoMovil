@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - TecnoMóvil</title>
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/tablet.css" media="screen and (min-width: 600px)">
+  <link rel="stylesheet" href="/css/desktop.css" media="screen and (min-width: 1024px)">
+</head>
+<body>
+
+  <header>
+    <h1>Contáctanos</h1>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/html/catalogo.html">Catálogo de Celulares</a></li>
+        <li><a href="/html/contacto.html">Contacto</a></li>
+        <li><a href="/html/testimonios.html">Testimonios</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="layout-contacto">
+      <section>
+        <h2>Atención al Cliente</h2>
+        <p>Llámanos o escríbenos directamente a nuestra línea directa de ventas:</p>
+        <h3>Teléfono / WhatsApp:</h3>
+        <p><strong>+57 300 123 4567</strong></p>
+        <p>Atención: Lunes a Sábado de 8:00 AM a 7:00 PM</p>
+        
+        <!-- Botón para abrir la ventana modal sin JS -->
+        <a href="#modal-registro" class="boton-modal">Registrar tus datos</a>
+      </section>
+
+      <section>
+        <h2>Visítanos en la Tienda</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.525547348981!2d-75.56157142418386!3d6.194165993793444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e44282361d761ef%3A0x8e83f069b0098f98!2sCentro%20Comercial%20El%20Tesoro!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco" 
+          width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </section>
+    </div>
+
+    <!-- Ventana Modal CSS Puro usando :target -->
+    <div id="modal-registro" class="modal-overlay">
+      <div class="modal-contenido">
+        <a href="#" class="modal-cerrar">&times;</a>
+        <h2>Registro de Cliente</h2>
+        <p>Ingresa tus datos para recibir asesoría personalizada y promociones:</p>
+
+        <form action="#" method="post">
+          <div>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="telefono">Número de Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+          </div>
+          <div>
+            <label for="interes">Modelo de Interés:</label>
+            <input type="text" id="interes" name="interes" placeholder="Ej: iPhone 15 Pro">
+          </div>
+          <button type="submit">Enviar Registro</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 TecnoMóvil - Politécnico de Colombia</p>
+  </footer>
+</body>
+</html>

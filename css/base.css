@@ -1,0 +1,253 @@
+/* Variables CSS */
+:root {
+  --color-principal: #5C0B74;
+  --color-acento: #2563eb;
+  --color-acento-hover: #1d4ed8;
+  --color-fondo: #f8fafc;
+  --color-blanco: #ffffff;
+  --color-texto: #0f172a;
+  --color-gris-suave: #e2e8f0;
+  --color-sombra: rgba(0, 0, 0, 0.1);
+  --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*hace que la pantalla del usuario se acomode acorde la tenga*/
+
+/*El -- le indicas a CSS que estás creando una variable para almacenar un valor (un color, una fuente, un tamaño) y reutilizarlo en todo tu código.*/
+html {
+  height: 100%;
+}
+
+body {
+  font-family: var(--fuente);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/dolares.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: var(--color-texto);
+  line-height: 1.6;
+
+  /* Propiedades agregadas para pegar el footer abajo */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Encabezado y Menú */
+header {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem;
+  display: block;
+  background-color: var(--color-acento);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--color-acento-hover);
+}
+
+/* Layout y Tarjetas */
+main {
+    flex: 1;
+  padding: 1rem;
+}
+
+section {
+  background: var(--color-blanco);
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px var(--color-sombra);
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--color-principal);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+/* Efecto Hover en Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px var(--color-sombra);
+}
+
+/* Catálogo y Testimonios con Precio Abajo */
+.tarjeta-producto, .tarjeta-testimonio {
+  background: var(--color-blanco);
+  border: 1px solid var(--color-gris-suave);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px var(--color-sombra);
+}
+
+.tarjeta-producto img, .tarjeta-testimonio img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.precio {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-acento);
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Modal CSS Puro con :target */
+.boton-modal {
+  display: inline-block;
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+  padding: 0.8rem 1.2rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.boton-modal:hover {
+  background-color: var(--color-acento-hover);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.modal-overlay:target {
+  display: flex;
+}
+
+.modal-contenido {
+  background: var(--color-blanco);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #64748b;
+  font-weight: bold;
+}
+
+/* Formulario dentro de Modal */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+input, textarea, button[type="submit"] {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid var(--color-gris-suave);
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+button[type="submit"] {
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.redes-sociales i {
+  font-size: 1.8rem; /* Tamaño del ícono */
+  color: var(--color-blanco); /* Color del ícono */
+  transition: color 0.3s ease;
+}
+
+.redes-sociales i:hover {
+  color: var(--color-acento); /* Cambio de color en hover */
+}

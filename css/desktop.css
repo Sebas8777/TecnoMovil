@@ -1,0 +1,15 @@
+/*Este motodo sirve para acomodar las columnas de las tablas*/
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.grid-catalogo, .grid-testimonios {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.layout-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
