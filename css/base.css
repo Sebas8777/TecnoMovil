@@ -1,4 +1,4 @@
-/* Variables CSS */
+/* Vbles CSS */
 :root {
   --color-principal: #5C0B74;
   --color-acento: #2563eb;
@@ -11,7 +11,7 @@
   --fuente: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-* {
+* {     /* ****** Significa que las reglas de adentro se aplicarán a absolutamente todos los elementos de la página web*/
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -19,7 +19,7 @@
 
 /*hace que la pantalla del usuario se acomode acorde la tenga*/
 
-/*El -- le indicas a CSS que estás creando una variable para almacenar un valor (un color, una fuente, un tamaño) y reutilizarlo en todo tu código.*/
+/*El -- le indica a CSS que estás creando una variable para almacenar un valor (un color, una fuente, un tamaño) y reutilizarlo en todo tu código.*/
 html {
   height: 100%;
 }
@@ -29,7 +29,7 @@ body {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/img/dolares.jpg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; /*hace una animacion en la imagen que se vea mas lenta de por si*/
   background-repeat: no-repeat;
   color: var(--color-texto);
   line-height: 1.6;
@@ -44,13 +44,13 @@ body {
 header {
   background-color: var(--color-principal);
   color: var(--color-blanco);
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem; /*Deja un espacio interno entre el contenido de la caja y sus bordes.*/
+  text-align: center;  /*Aling es que tenga todo alineado de arriba hacia abajo*/
 }
 
 header h1 {
   font-size: 1.6rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5rem; /*Deja un espacio libre abajo de la caja para que no se pegue con otros elementos.*/
 }
 
 nav ul {
@@ -76,7 +76,7 @@ nav a:hover {
   background-color: var(--color-acento-hover);
 }
 
-/* Layout y Tarjetas */
+/* Layout y Tarjetas señor@s */
 main {
     flex: 1;
   padding: 1rem;
@@ -98,7 +98,7 @@ h2 {
 
 h3 {
   font-size: 1.1rem;
-  margin-top: 0.5rem;
+  margin-top: 0.5rem;  /*Margin siempre va hacer un espaciado en blanco*/
 }
 
 p {
@@ -108,7 +108,7 @@ p {
 /* Efecto Hover en Imágenes */
 img {
   max-width: 100%;
-  height: auto;
+  height: auto;  /*El alto */
   border-radius: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -129,8 +129,8 @@ img:hover {
   box-shadow: 0 2px 6px var(--color-sombra);
 }
 
-.tarjeta-producto img, .tarjeta-testimonio img {
-  width: 100%;
+.tarjeta-producto img, .tarjeta-testimonio img {                   /*object-fit: contain: ;escala una imagen o video para que quepa por completo dentro de su contenedor sin perder su forma ni recortarse*/
+  width: 100%;  
   max-height: 250px;
   object-fit: contain;
 }
@@ -147,7 +147,7 @@ img:hover {
 .boton-modal {
   display: inline-block;
   background-color: var(--color-acento);
-  color: var(--color-blanco);
+  color: var(--color-blanco); 
   padding: 0.8rem 1.2rem;
   text-decoration: none;
   border-radius: 6px;
@@ -164,13 +164,13 @@ img:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%;/*el ancho*/
+  height: 100%;                   /*El alto */
   background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem;  /*Deja un espacio interno entre el contenido de la caja y sus bordes.*/
   z-index: 1000;
 }
 
@@ -180,7 +180,7 @@ img:hover {
 
 .modal-contenido {
   background: var(--color-blanco);
-  padding: 1.5rem;
+  padding: 1.5rem; /*Deja un espacio interno entre el contenido de la caja y sus bordes.*/
   border-radius: 10px;
   width: 100%;
   max-width: 450px;
@@ -198,7 +198,7 @@ img:hover {
   font-weight: bold;
 }
 
-/* Formulario dentro de Modal */
+/* Formulario dentro de Modal debe de rellenar los campos*/
 form {
   display: flex;
   flex-direction: column;
@@ -212,8 +212,8 @@ label {
 }
 
 input, textarea, button[type="submit"] {
-  width: 100%;
-  padding: 0.6rem;
+  width: 100%; /*el ancho*/
+  padding: 0.6rem; 
   border: 1px solid var(--color-gris-suave);
   border-radius: 6px;
   font-family: inherit;
